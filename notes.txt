@@ -1,0 +1,13 @@
+a RESTful app should provide for all the CRUD operations
+
+            RESTful         |       non REST
+                            |
+GET         /api/users      |       /getUsers
+                            |
+POST        /api/users      |       /addUser
+                            |
+UPDATE      /api/users/:id  |       /updateUser
+                            |
+DELETE      /api/users/:id  |       /deleteUser
+
+REST allows for more efficient ServerSide Routing code
