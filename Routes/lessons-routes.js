@@ -6,20 +6,20 @@ const router = express.Router();
 // all endpoints are for /api/lessons
 router.post('/', (req, res) => {
     Lessons.add(req.body)
-    .then(lesson => {
+    .then((lesson) => {
         res.status(200).json(lesson)
     })
-    .catch(error => {
-        res.status(500).json({error});
+    .catch((error) => {
+        res.status(500).json({message: "Cannot add Lesson"});
     })
 });
 
 router.get('/', (req, res) => {
     Lessons.find()
-    .then(lessons => {
+    .then((lessons) => {
         res.status(200).json(lessons);
     })
-    .catch(error => {
+    .catch((error) => {
         res.status(500).json({message: "Unable to retrieve Lessons"})
     })
 });
