@@ -10,7 +10,7 @@ server.get('/', (req, res) => {
     res.status(200).json({message: "Let everyone go to his private shelter"});
 });
 
-server.use('/api/lessons', restricted, lessonsRouter);
-server.use('/api/messages', restricted, messagesRouter);
+server.use('/api/lessons', lessonsRouter);
+server.use('/api/messages', messagesRouter);
 
 module.exports = server;
