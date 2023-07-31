@@ -10,7 +10,7 @@ router.post('/', (req, res) => {
         res.status(200).json(lesson)
     })
     .catch(error => {
-        res.status(500).json({message: "Cannot add Lesson"});
+        res.status(500).json(error);
     })
 });
 
